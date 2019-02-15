@@ -1,0 +1,10 @@
+body{
+    margin:0;
+    padding:0;
+}
+.btn-show-more{
+    margin: 10px auto;
+    display: block;
+    font-size: 14px;
+    padding: 12px 50px;
+}
