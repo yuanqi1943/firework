@@ -1,7 +1,7 @@
 <template>
     <div class="header">
       <div>
-        <div class="right_pic"><img @click="move_to('index', 0)" class="title" src="@/assets/img/logo.png" alt=""></div>
+        <div class="right_pic"><img @click="move_to('index', 0)" class="title" :src="imgLogo"  alt=""></div>
         <div class="left_txt">
             <div @click="moveTo(linkAddress.index)" :class="{'active': value===0}">首页</div>
             <div @click="moveTo(linkAddress.about)" :class="{'active': value===1}">关于我们</div>
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import imgLogo from './img/logo.jpg'
 export default {
   name: 'Header',
   data () {

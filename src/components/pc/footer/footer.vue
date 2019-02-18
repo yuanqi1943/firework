@@ -22,8 +22,6 @@
             </el-footer>    
         </el-container>
     </div>
-</el-container>
-    </div>
 </template>
 
 <script>
@@ -46,7 +44,9 @@ export default {
 
   },
   computed: {
-  
+    value () {
+      return 0
+    },
   },
   methods: {
     moveTo(address){
@@ -74,6 +74,25 @@ export default {
     }
     .footer-menu-list{
         margin: 20px;
+        cursor: pointer;
+    }
+    .footer-menu-list:after{
+        content: '';
+        width: 100%;
+        height: 2px;
+        display: block;
+        background: #fff;
+        position: absolute;
+        opacity: 0;
+        bottom: 0;
+        left: 0;
+        transition: all ease-in-out .25s;
+        transform: scaleX(0);
+        box-shadow: 0 0 5px 0 #fff;
+    }
+    .footer-menu-list.active{
+       transform: scaleX(1);
+       opacity: 1;
     }
 
     .el-header{

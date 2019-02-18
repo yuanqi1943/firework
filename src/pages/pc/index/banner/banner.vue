@@ -13,9 +13,10 @@
 </template>
 
 <script>
-import img1 from './img/img-banner-1.jpg'
-import img2 from './img/img-banner-2.jpg'
-import img3 from './img/img-banner-3.jpg'
+import img1 from './img/img-banner-4.jpg'
+import img2 from './img/img-banner-5.jpg'
+import img3 from './img/img-banner-6.jpg'
+import img4 from './img/img-banner-7.jpg'
 
 export default {
   name: 'banner',
@@ -42,7 +43,8 @@ export default {
       imgIndex:[
         img1,
         img2,
-        img3
+        img3,
+        img4
       ]
     }
   },
@@ -83,7 +85,7 @@ export default {
         background-image:url('./img/logo.png') 
     }
     .swiper-container{
-      height: 600px;
+      height: 720px;
     }
     .swiper-pagination{
         position: absolute;
@@ -96,6 +98,6 @@ export default {
     }
     .banner-img{
       height: 100%;
-      background-size: auto;
+      background-size: cover;
     }
 </style>

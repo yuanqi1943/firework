@@ -1,22 +1,23 @@
 <template>
-      <div class="header">
-        <div>
-          <div class="right_pic"><img @click="move_to('index', 0)" class="title" src="@/assets/img/logo.png" alt=""></div>
-          <div class="left_txt">
-              <div @click="moveTo(linkAddress.index)" :class="{'active': value===0}">首页</div>
-              <div @click="moveTo(linkAddress.about)" :class="{'active': value===1}">关于我们</div>
-              <div @click="moveTo(linkAddress.products)" :class="{'active': value===2}">产品中心</div>
-              <div @click="moveTo(linkAddress.news)" :class="{'active': value===3}">新闻资讯</div>
-              <div @click="moveTo(linkAddress.contact)" :class="{'active': value===4}">联系我们</div>
-          </div>
+    <div class="header">
+      <div>
+        <div class="right_pic"><img @click="move_to('index', 0)" class="title" :src="imgLogo" alt=""></div>
+        <div class="left_txt">
+            <div @click="moveTo(linkAddress.index)" :class="{'active': value===0}">首页</div>
+            <div @click="moveTo(linkAddress.about)" :class="{'active': value===1}">关于我们</div>
+            <div @click="moveTo(linkAddress.products)" :class="{'active': value===2}">产品中心</div>
+            <div @click="moveTo(linkAddress.news)" :class="{'active': value===3}">新闻资讯</div>
+            <div @click="moveTo(linkAddress.contact)" :class="{'active': value===4}">联系我们</div>
         </div>
       </div>
-      <!-- <transition name="fade">
-          <Login v-if="is_login" />
-      </transition> -->
+    </div>
+    <!-- <transition name="fade">
+        <Login v-if="is_login" />
+    </transition> -->
 </template>
 
 <script>
+import imgLogo from './img/logo.jpg'
 export default {
   name: 'Header',
   data () {
@@ -27,7 +28,8 @@ export default {
         products:'pc.products',
         news:'pc.news',
         contact:'pc.contact',
-      }
+      },
+      imgLogo:imgLogo
     }
   },
   components: {
@@ -35,7 +37,7 @@ export default {
   },
   computed: {
     value () {
-      return '1'
+      return 1
     },
     // user () {
     //   return this.$store.state.user
